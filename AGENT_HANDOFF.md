@@ -2,46 +2,31 @@
 
 ## Latest pushed commit
 
-`05ddbf81d83c14fe2fd91f980d5d19e5409ea892` on `origin/main`.
-This handoff update follows that commit.
+See `origin/main` HEAD after the Pages workflow commit.
 
-Repo: https://github.com/logiagenesis/flyflyfly
+Play URL: https://logiagenesis.github.io/flyflyfly/
 
 ## What changed
 
-Playable core on `main`:
-
-- Vite + TypeScript + Three.js
-- Synthetic Gauteng preview terrain
-- Verified place markers
-- Mouse look, thrust, climb/descend, boost
-- Ground collision
-- HUD (altitude, AGL, speed km/h, heading, mode, FPS)
-- Wireframe + day/night
-- GitHub Actions (`npm install`, `npm test`, `npm run build`)
-- `data/SOURCES.md`
+- Playable synthetic Gauteng preview on `main`
+- GitHub Actions now builds, tests, and deploys `dist/` to GitHub Pages
+- README no longer treats local `npm run dev` as the primary path
 
 ## What works
 
-- `npm test` — 5 projection tests passed
-- `npm run build` — passed locally
+- Source is on GitHub
+- CI build workflow exists
 
-## What is incomplete
+## What may still block the public URL
 
-- No `package-lock.json` on GitHub yet (Actions uses `npm install`)
-- No real DEM / official boundary polygon
-- Germiston and Randburg points are coarser than OR Tambo / Soweto / Pretoria
-- No GitHub Pages deploy job
-- No aircraft mesh
+If the deploy job fails with a Pages source error, one repo setting is required:
 
-## Commands run
+1. Open https://github.com/logiagenesis/flyflyfly/settings/pages
+2. Build and deployment → Source → GitHub Actions
+3. Save. The next `main` push publishes the site.
 
-```bash
-npm install
-npm test
-npm run build
-```
+Do not point Pages at `logiagenesis.github.io` root.
 
 ## Recommended next task
 
-Add a license-checked DEM + Gauteng polygon pipeline under `scripts/`, keep raw rasters out of git.
+Confirm the Pages URL loads, then add a license-checked DEM pipeline under `scripts/`.

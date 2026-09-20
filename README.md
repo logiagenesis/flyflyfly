@@ -6,16 +6,11 @@ The map area is Gauteng, South Africa. Place markers use published coordinates. 
 
 Repo: https://github.com/logiagenesis/flyflyfly
 
-## Run
+Play in the browser (no local install):
 
-```bash
-npm install
-npm test
-npm run build
-npm run dev
-```
+https://logiagenesis.github.io/flyflyfly/
 
-Open the local Vite URL, click the canvas, fly.
+That URL is live after GitHub Actions finishes the Pages deploy on `main`.
 
 ## Controls
 
@@ -52,4 +47,6 @@ The in-app mode label is `SYNTHETIC GAUTENG PREVIEW` until a DEM pipeline exists
 
 ## Deploy
 
-`npm run build` writes static files to `dist/`. Host that folder on any static host. `base` is `./` so relative paths work on project pages or a subdomain.
+GitHub Actions builds `dist/` and publishes it to GitHub Pages.
+Vite `base` is `./` so the project site works at `/flyflyfly/`.
+Do not publish this app into `logiagenesis.github.io` root; that repo is already used for another preview.
