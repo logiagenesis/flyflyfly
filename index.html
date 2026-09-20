@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flyflyfly — Gauteng preview</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene"></canvas>
+      <div id="hud" class="overlay">
+        <div class="hud-block">
+          <div class="title">flyflyfly</div>
+          <div id="mode-label" class="mode">SYNTHETIC GAUTENG PREVIEW</div>
+          <div id="hud-stats" class="stats"></div>
+        </div>
+      </div>
+      <div id="help" class="overlay help hidden">
+        <h1>Controls</h1>
+        <ul>
+          <li><kbd>Click</kbd> capture mouse look</li>
+          <li><kbd>W</kbd> thrust forward</li>
+          <li><kbd>S</kbd> brake / reverse thrust</li>
+          <li><kbd>A</kbd> / <kbd>D</kbd> yaw</li>
+          <li><kbd>Space</kbd> climb</li>
+          <li><kbd>Ctrl</kbd> descend</li>
+          <li><kbd>Shift</kbd> boost</li>
+          <li><kbd>F</kbd> wireframe</li>
+          <li><kbd>L</kbd> day / night</li>
+          <li><kbd>H</kbd> this help</li>
+          <li><kbd>Esc</kbd> release mouse</li>
+        </ul>
+        <p>Terrain is a labeled synthetic Highveld preview. Place markers use verified coordinates. Elevations are not survey data.</p>
+      </div>
+      <div id="hint" class="overlay hint">Click to fly · H help</div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
