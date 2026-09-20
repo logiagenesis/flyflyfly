@@ -2,11 +2,14 @@
 
 ## Latest pushed commit
 
-`64664c96fcbc959ce4cf2e86bb6098b8f59c8341` on `origin/main` before this docs commit. Read HEAD after pull.
+`05ddbf81d83c14fe2fd91f980d5d19e5409ea892` on `origin/main`.
+This handoff update follows that commit.
+
+Repo: https://github.com/logiagenesis/flyflyfly
 
 ## What changed
 
-Empty repo initialized with the playable core:
+Playable core on `main`:
 
 - Vite + TypeScript + Three.js
 - Synthetic Gauteng preview terrain
@@ -14,21 +17,21 @@ Empty repo initialized with the playable core:
 - Mouse look, thrust, climb/descend, boost
 - Ground collision
 - HUD (altitude, AGL, speed km/h, heading, mode, FPS)
-- Wireframe toggle
-- Day/night toggle
-- GitHub Actions build + test
-- Source notes in `data/SOURCES.md`
+- Wireframe + day/night
+- GitHub Actions (`npm install`, `npm test`, `npm run build`)
+- `data/SOURCES.md`
 
 ## What works
 
 - `npm test` — 5 projection tests passed
-- `npm run build` — `tsc --noEmit && vite build` passed
+- `npm run build` — passed locally
 
 ## What is incomplete
 
+- No `package-lock.json` on GitHub yet (Actions uses `npm install`)
 - No real DEM / official boundary polygon
-- Germiston and Randburg points are coarser than GeoNames IDs used for OR Tambo / Soweto / Pretoria
-- No GitHub Pages deploy job yet
+- Germiston and Randburg points are coarser than OR Tambo / Soweto / Pretoria
+- No GitHub Pages deploy job
 - No aircraft mesh
 
 ## Commands run
@@ -41,4 +44,4 @@ npm run build
 
 ## Recommended next task
 
-Add a `scripts/` pipeline that downloads a license-checked DEM and Gauteng polygon, converts them to a compact heightfield, and keeps raw rasters out of git.
+Add a license-checked DEM + Gauteng polygon pipeline under `scripts/`, keep raw rasters out of git.
